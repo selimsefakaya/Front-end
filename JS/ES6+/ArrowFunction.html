@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    
+    Arrow Function nedir? 
+
+
+    <script>
+        const hello = function() {
+            console.log("Hello!");
+        }
+        hello();
+
+        //Arrow function ile oluşturmak:
+        const helloo = () => {console.log("Helloo!");};     //Hiç parametre yoksa parantez şart.
+        helloo();
+
+        const Hellon = firstName => {console.log("Hello", firstName, "!");};    //Tek parametre varsa parantezle belirtmek şart değil.
+        Hellon("Sefa");
+
+        const Hellons = (firstName, lastName) => {console.log("Hello", firstName, lastName, "!");};
+        Hellons("Sefa", "Kaya");
+
+        const Hellon2 = firstName => console.log("Hello", firstName, "!");      //Tek komut varsa süslü parantez şart.değil.
+        Hellon("Sefa");
+
+
+        //////////////
+        const cube = function(x) {
+            return x*x*x;
+        }
+        console.log(cube(4));
+
+        const cubeArrow = x => x*x*x;
+        console.log(cubeArrow(5));
+
+
+    </script>
+</body>
+</html>

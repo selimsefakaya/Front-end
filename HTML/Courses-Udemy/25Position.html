@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+
+    <style>
+        .Box {
+            width: 10%;
+            height: 350px;
+            margin-bottom: 10px;
+            position: static
+                /*Default değer zaten static*/
+        }
+
+        #Box_1 {
+            background-color: darkorange;
+            position:sticky;
+            top:0px;
+        }
+
+        #Box_2 {
+            background-color: darkorchid;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        #Box_3 {
+            background-color: darkgreen;
+            position: relative;
+            top: 50px;
+            left: 45%;
+        }
+
+        #Box_4 {
+            background-color: rgb(233, 185, 169);
+            position: fixed;
+            bottom: 0px;
+            right: 5%;
+            width: 90%;
+            height: 25px;
+            text-align: center;
+            opacity: 0.5;
+        }
+
+        #Box_5 {
+            background-color: rebeccapurple;
+            position: sticky;
+            top: 5px;
+            left: 15%;
+            height: 200px;
+        }
+
+        p {
+            position:relative;
+            width: 88%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!--Position:static
+        Varsayılan olarak verilen değerdir.
+        Örneğin blok ise default olarak alt alta sıralanır.
+        position:static
+    -->
+    <!--Position:relative
+        4 taraftan da değerler verilerek normalde bulunması gereken noktaya göre öğeler konumlandırılabilir.
+        Relative öğeden sonra gelen öğe için konum ayarı yapılmamışsa, relative öğe normal konumundaymış gibi konumlanır. 
+        position:relative;
+        top:15px;
+        left:50px;
+    -->
+    <!--Position:absolute
+        relative ile farkı, öğenin normalde bulunması gereken konuma göre değil; sayfanın başlangıç noktası göre konumlandırılmasıdır.
+        position:absolute;
+        bottom: 100px;
+        left: 150px;
+    -->
+    <!--Position:fixed
+        4 taraftan da değerler verilerek konumlandırılabilir.
+        Absolute ile farkı, öğe sayfanın belirtilen konumunda sabittir, yani sayfa kaydırılsa bile öğe aynı yerinde kalır.
+    -->
+    <!--Position:sticky
+        Öğenin belirli bir konumu zaten vardır. Ancak sayfa kaydırılınca o öğe boşa çıkmaz ve belirlenen konumda sürekli üstte kalmaya devam eder.
+    -->
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat excepturi voluptatum voluptate ipsa quisquam!
+        Expedita quos consequuntur voluptatem sit, magni dolorum hic quam, saepe nobis, aliquam porro neque omnis
+        excepturi.
+        Sint modi soluta exercitationem nihil doloremque ex maiores fuga iure tempora voluptate minus eligendi vel est
+        expedita possimus quisquam tenetur error quibusdam vitae repudiandae odio sed, provident voluptates.
+        Necessitatibus, maxime.
+        Assumenda, at alias amet neque dolore esse magnam possimus repellendus odio incidunt blanditiis rerum maxime.
+        Sequi veniam animi nostrum veritatis blanditiis magnam qui rem et. Molestiae nisi hic eum impedit.
+        Odio corrupti quae ex odit nam asperiores veritatis velit maiores hic laborum ab, nulla voluptatum mollitia,
+        quidem, accusantium explicabo! Quidem exercitationem quas adipisci aliquam dolor maiores maxime? Velit, officia
+        id.
+        Atque quae porro delectus! Eius saepe hic accusantium atque animi error, ipsam quo corporis obcaecati quaerat
+        dicta quos consequatur architecto laboriosam natus molestias fugiat provident ut, rerum minima nobis placeat.
+    </p>
+    
+    <div class="Box" id="Box_1">Box 1</div>
+    <div class="Box" id="Box_2">Box 2</div>
+    <div class="Box" id="Box_3">Box 3</div>
+    <div class="Box" id="Box_4">Box 4</div>
+    <div class="Box" id="Box_5">Box 5</div>
+    <div style="height:5000px"></div>
+
+</body>
+
+</html>

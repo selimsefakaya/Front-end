@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For in & For of</title>
+</head>
+<body>
+    <script>
+        const person = {
+            name : "Selim Sefa",
+            age : 25,
+            salary : 10000
+        };
+
+        const langs = ["Python", "Java", "C++", "Php"];
+        const name = "Sefa";
+
+        // For in
+
+        console.log("Obje üzerinde gezinme:");
+        for (let prop in person) {
+            console.log(prop, ":", person[prop]);
+        }
+
+        console.log("\nArray üzerinde gezinme:");
+        for (let index in langs) {
+            console.log(index, langs[index]);
+        }
+
+        console.log("\nString üzerinde gezinme:");
+        for (let index in name) {
+            console.log(index, name[index]);
+        }
+
+        //////////////////////////////////////
+        // For of
+
+        //Object üzerinde gezinemez, hata verir:
+        // for (let value of person) { 
+        //     console.log(value);
+        // }
+
+        console.log("\nArray üzerinde gezinme:");
+        for (let value of langs) {
+            console.log(value);     //direkt değerlere ulaşır.
+        }
+
+        console.log("\nString üzerinde gezinme:");
+        for (let character of name) {
+            console.log(character);
+        }
+
+    </script>
+</body>
+</html>

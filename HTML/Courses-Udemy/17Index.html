@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Selectors</title>
+
+    <link rel="stylesheet" href="17Index.css">
+
+</head>
+<body>
+
+    <div class="Container">
+        <p class="p1">Container > Paragraph 1</p>
+        <p class="p2">Container > Paragraph 2</p>
+
+        <div class="Box">
+            .Container > Box 1
+
+            <p>.Container > Box > Paragraph 3</p>
+        </div>
+
+        <div class="Box" id="Box_2">
+            .Container > Box 2
+        </div>
+    </div>
+    
+    <p>Paragraph 4</p>
+    <p>Paragraph 5</p>
+
+</body>
+</html>

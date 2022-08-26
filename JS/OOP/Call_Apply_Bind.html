@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call & Apply & Bind</title>
+</head>
+
+<body>
+    <p>
+        Call(): Verilen this anahtar değeriyle (obje) ve bağımsız olarak sağlanan bağımsız argümanlarla bir fonksiyonu
+        çağırır. Argümanlar fonksiyona tek tek gönderilir.
+    </p>
+    <p>
+        Apply(): Call ile birebir aynı çalışır, sadece yapısı biraz farklıdır.
+    </p>
+    <p>
+        Bind(): Yapısı itibariyle biraz farklıdır. Benzer işlem yapar; bir fonksiyonu bir objeye bağlar. Kopya fonksiyon
+        üretir. Genellikle event'lerde kullanılır. this anahtar kelimesinin karıştığı durumlarda bind() kullanmak
+        faydalıdır.
+    </p>
+
+    <script>
+
+        //Call()
+        const obj1 = {
+            number1: 10,
+            number2: 20
+        }
+        const obj2 = {
+            number1: 30,
+            number2: 40
+        }
+
+        function addNumbers(number3, number4) {
+            console.log(this.number1 + this.number2 + number3 + number4);
+        }
+
+        addNumbers(100, 200);        //NaN gelir. numb1-2 hangi objeden alacağını bilmiyor. undefined. this demek window objesine götürür.
+
+        addNumbers.call(obj1, 100, 200);  //window objesi yerine yeni bir obje çağırdık.
+        addNumbers.call(obj2, 100, 200);  //window objesi yerine yeni bir obje çağırdık.
+
+        //Apply():Call ile aynıdır, yapısı farklıdır:
+        addNumbers.apply(obj1, [100, 200]);
+        addNumbers.apply(obj2, [100, 200]);
+
+        //Bind()
+        function getNumbersTotal(number3, number4) {
+            return this.number1 + this.number2 + number3 + number4;
+        }
+
+        const copyFunc1 = getNumbersTotal.bind(obj1);
+        console.log(copyFunc1(100,200));
+        const copyFunc2 = getNumbersTotal.bind(obj2);
+        console.log(copyFunc2(100,200));
+
+        // Fonksiyonun bir kopyası üretildiği için istenildiği yerde kullanılabilir. 
+
+
+    </script>
+</body>
+
+</html>

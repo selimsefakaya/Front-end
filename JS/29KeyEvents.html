@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Events</title>
+</head>
+<body>
+    
+    <h4>Buraya yazı yaz.</h4>
+    <input type="text">
+
+
+    <script>
+        // Keypress
+        // document.addEventListener("keypress", run);     //Yalnızca harfler ve sayılar, enter spacae vs dahil.
+        // Keydown
+        // document.addEventListener("keydown", run);      //Her türlü tuşu algılar.
+        //Keyup
+        document.addEventListener("keyup", run);        //Her türlü tuş için geçerlidir, ancak tuş bırakılınca çalışır.
+        
+        function run(e) {
+            console.log(e.which);   //ASCII TABLE
+            console.log(e.key);
+        }
+
+        //Uygulama
+
+        const h4 = document.querySelector("h4");
+        const input = document.querySelector("input");
+
+        input.addEventListener("keyup", changeText);
+
+        function changeText(e) {
+            h4.textContent = e.target.value;
+            if(h4.textContent === "") {
+                h4.textContent = "Buraya yazı yaz.";
+            }
+        }
+
+    </script>
+</body>
+</html>

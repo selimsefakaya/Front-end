@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps</title>
+</head>
+<body>
+
+    Mapler : Key (Anahtar) - Value (Değer) <br>
+    Her anahtar'a karşılık gelen değerdir. <br>
+    Keyler her türlü veri tipine sahip olabilir, int string.. primitif veya referans tipli olabilir. <br>
+    Map'ler, Python'daki dictionary veri tipine benzerdir.
+
+    <script>
+        let myMap = new Map();
+        console.log(typeof myMap);      //object yani referans tip;
+        
+        const key1 = "Selim";
+        const key2 = {a:10,b:20};
+        const key3 = () => 2;
+        
+        myMap.set(key1,"string key");
+        myMap.set(key2,"object literal key");
+        myMap.set(key3,"function key");
+        
+        console.log(myMap);
+        console.log(myMap.get(key1));
+        console.log(myMap.get(key2));
+        console.log(myMap.get(key3));
+        console.log(myMap.size);
+
+
+        
+        const cities = new Map();
+        cities.set("Ankara", 6);
+        cities.set("İstanbul", 18);
+        cities.set("Antalya", 4);
+
+        //For Each
+        cities.forEach(function(value,key){
+            console.log(key, ":", value +".000.000")
+        });
+
+        //For of
+        for(let [key,value] of cities){     //distructing yapısı.
+            console.log(key,value);
+        }
+
+        // Map keys
+        for (let key of cities.keys()) {    //Array döndürdü ve içinde gezindik.
+            console.log(key)
+        }
+
+        //Map values
+        for(let value of cities.values()){
+            console.log(value);
+        }
+
+
+        //Arraylerden Map Oluşturma
+        const array = [["key1", "value1"],["key2","value2"]];
+        const lastMap = new Map(array);
+        console.log(lastMap);
+
+        //Map'ten array oluşturma
+        const arr = Array.from(lastMap);
+        console.log(arr);
+
+
+    </script>
+    
+</body>
+</html>

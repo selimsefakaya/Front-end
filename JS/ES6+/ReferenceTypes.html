@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reference Types</title>
+</head>
+
+<body>
+    Referans tipler: Bellekte belli bir yeri tutan değerlerdir. <br>
+    Primitif tipler: Sadece değeri taşıyan veri tipidir. <br>
+    Referans tipler, map ve setler için önemlidir.
+    Date object, array, function, kendi oluşturduğumuz objeler vs referans tiplerdir.
+
+
+    <script>
+        let a = "Sefa";     //değer veri tipi
+        let b = "Sefa";
+
+        if (a === b) {
+            console.log("Primitif tipler eşit.")
+        }
+
+        /////////////////////
+
+        let array1 = [1, 2, 3, 4, 5];
+        let array2 = [1, 2, 3, 4, 5];
+
+        if (array1 === array2) {
+            console.log("Referans tipler eşit.")
+        } else {
+            console.log("Referans tipler eşit değil. Çünkü referans tiplerde, bellekte aynı yeri gösterip göstermediğini kontrol ediyor. Her verinin bellekte kendine ait adresi olduğu için false geliyor.")
+        }
+
+        /////////////////
+
+        const person1 = {
+            name : "Sefa",
+            age : 25
+        }
+        const person2 = {
+            name : "Sefa",
+            age : 25
+        }
+
+        if(person1 === person2) {
+            console.log("Referans tipler eşit.")
+        } else {
+            console.log("Referans tipler eşit değil. Çünkü referans tiplerde, bellekte aynı yeri gösterip göstermediğini kontrol ediyor. Her verinin bellekte kendine ait adresi olduğu için false geliyor.")
+        }
+
+        /////////////////////,
+
+        const cities = new Map();
+        cities.set("Ankara", 6);
+        cities.set("İstanbul", 18);
+        cities.set("Antalya", 4);
+        cities.set([1,2,3],"Array");
+
+        console.log(cities.get("Ankara"));
+        console.log(cities.get([1,2,3]));       //undefined! yani sorgulananlar bellekte farklı yerleri sorguluyor.
+        // Bunu yapabilmek için:
+        const key = [1,2,3];
+        cities.set(key,"Array");
+        console.log(cities.get(key));
+        
+    </script>
+
+</body>
+
+</html>

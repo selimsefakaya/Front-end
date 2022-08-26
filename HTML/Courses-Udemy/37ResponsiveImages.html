@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .imgRes {
+            max-width: 100%;
+            height: auto;
+            position: fixed;
+            bottom: 0px;
+        }
+
+        .ImgDiv {
+            width: 25%;
+            border: 2px solid black;
+            float: left;
+            margin: 3px;
+        }
+
+        .ImgDiv img {
+            max-width: 100%;
+        }
+
+        @media screen and (max-width:700px) {
+
+            .ImgDiv {
+                width: 48%;
+                margin: 2px;
+                margin-left: 1%;
+            }
+
+        }
+
+        @media screen and (max-width:400px) {
+
+            .ImgDiv {
+                width: 80%;
+                margin: 5px;
+                margin-left: 10%;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <img class="imgRes" src="images/IMG_3495.JPG" alt="" width="100px">
+
+    <div class="ImgDiv">
+        <img src="images/IMG_3495.JPG" width="500px">
+    </div>
+    <div class="ImgDiv">
+        <img src="images/IMG_3495.JPG" width="500px">
+    </div>
+    <div class="ImgDiv">
+        <img src="images/IMG_3495.JPG" width="500px">
+    </div>
+    <div class="ImgDiv">
+        <img src="images/IMG_3495.JPG" width="500px">
+    </div>
+    <div class="ImgDiv">
+        <img src="images/IMG_3495.JPG" width="500px">
+    </div>
+    <div class="ImgDiv">
+        <img src="images/IMG_3495.JPG" width="500px">
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <title>Jquery</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
+    <!-- <script src="jquery-3.6.0.min.js"></script>  External -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+        integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+
+    <a href="#">Link 1</a>
+    <h3 id="header">JQuery</h3>
+    <ul id="list-ul">
+        <li class="item1 item">JQuery 1</li>
+        <li class="item">JQuery 2</li>
+        <li class="item">Jquery 3 <a href="#">Link 2</a></li>
+    </ul>
+
+
+
+
+    <script>
+        document.getElementById("header").style.color = "red";      //JS ile
+
+        $("#header").css("color","blue");       //JQuery ile
+
+        $("#list-ul a").css("text-decoration","none");
+
+        $("a").css("text-decoration","none");
+
+        /*Obje ile çoklu css özellikleri verme*/
+
+        var styleHeader = {
+            color:"blue",
+            fontSize:"30px",
+            border:"1px solid black",
+        }
+        $("#header").css(styleHeader);
+
+        var styleLi = {
+            color:"brown",
+            fontSize:"12px",
+            listStyleType:"none",
+        }
+        $("li").css(styleLi);
+
+        //JS ile:
+        var lists = document.querySelectorAll("li");
+        for(let i=0;i<lists.length;i++) {
+            lists[i].style = "color:red; font-size:20px"
+        }
+
+        //JQuery ile ayrı obje olmadan çoklu css özelliği verme
+        $("a").css( {
+            color:"gray",
+            border:"1px solid red"
+        })
+    </script>
+</body>
+
+</html>

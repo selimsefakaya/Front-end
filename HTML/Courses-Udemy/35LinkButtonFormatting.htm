@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link and Button Formatting & Add Icon to Button</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        a{
+            color:rgb(84, 180, 50);
+            font-size: 20px;
+            margin: 10px;
+            text-decoration:none;
+            
+        }
+        button {
+            width: 150px;
+        }
+        a:hover {
+            color: aqua;
+            background-color: blueviolet;
+            padding: 5px;
+            border-radius: 10px;
+            font-size: 22px;
+        }
+        .Button {
+            padding: 10px 25px;
+            background-color: rgb(77, 121, 122);
+            border: none;
+            border-radius: 25px;
+            color: aliceblue;
+            font-size: 15px;
+            transition-duration: 0.4s;
+        }
+        .Button:hover {
+            background-color: rgb(139, 218, 221);
+            color: rgb(77, 121, 122);
+        }
+        .Button2 {
+            padding: 10px 20px;
+            background-color: white;
+            border: 2px solid darksalmon;
+            color: darksalmon;
+            border-radius: 10px;
+            transition-duration: 0.6s;      /*geçiş süresi*/
+            -webkit-transition-duration: 0.6s;
+            -moz-transition-duration: 0.6s;
+            cursor:pointer;     /*Mouse imleci*/
+        }
+        .Button2:hover {
+            background-color: darksalmon;
+            color: white;
+            font-weight: bold;
+        }
+        .Button i {
+            color: white;
+            margin-right:3px;
+        }
+        .Button:hover i {
+            color: rgb(77, 121, 122);
+        }
+        .Button2 i {
+            color: hsl(0, 0%, 50%);
+            margin-right: 3px;
+        }
+        .Button2:hover i {
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+    <a href="#">Link 4</a>
+    <a href="#">Link 5</a>
+
+    <br><br><br>
+
+    <button class="Button">
+        <i class="fa-solid fa-house-chimney"></i>
+        Index</button>
+    <button class="Button">
+        <i class="fa-solid fa-question"></i>
+        Info</button>
+    <button class="Button">
+        <i class="fa-solid fa-square-rss"></i>
+        News</button>
+    <button class="Button">
+        <i class="fa-solid fa-envelope-open-text"></i>
+        Contact</button>
+
+    <br><br><br>
+
+    <button class="Button2">
+        <i class="fa-solid fa-house-chimney"></i>
+        Index</button>
+    <button class="Button2">
+        <i class="fa-solid fa-question"></i>
+        Info</button>
+    <button class="Button2">
+        <i class="fa-solid fa-square-rss"></i>
+        News</button>
+    <button class="Button2">
+        <i class="fa-solid fa-envelope-open-text"></i>
+        Contact</button>
+    
+</body>
+</html>

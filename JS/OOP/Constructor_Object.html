@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contructor ve Obje Oluşturma</title>
+</head>
+<body>
+C# ve Java gibi dillere kıyasla JS içinde OOP daha az gelişmiştir.
+<br>
+<br>
+    <script>
+        // console.log(window);
+        // console.log(this);
+
+        const emp1 = {      //Object literal
+            name: "Sefa",
+            age: 25,
+        };
+        const emp2 = {
+            name: "Selim",
+            age: 25
+        };
+
+        console.log(emp1);      //Objelerimizin name ve age özelliği var, herhangi bir metodu yok.
+        
+        emp1.salary = 10000;    //Sonradan özellik ve fonksiyon eklenebilir.
+        emp1.showInfos = () => console.log("Bilgiler gösterildi.");
+        emp1.showInfos()
+
+        // Constructor
+        // Her çalışan için aynı objeden tekrar tekrar oluşturmak yerine bir tane ortak metot oluşturup (yapıcı fonksiyon) bu fonksiyonla istediğimiz kadar obje oluşturmak daha mantıklıdır. 
+        function Employee1() {   // Yapıcı fonksiyon (Constructor)   //**Büyük harfle başlamalıdır.
+            this.name = "Sefa";
+        }
+        const emp11 = new Employee1();
+        console.log(emp11.name)
+
+        function Employee(name, age, salary) {
+            this.name = name;
+            this.age = age;
+            this.salary = salary;
+
+            this.showInfos = () => console.log("Name:", this.name, "\nAge:", this.age, "\nSalary:", this.salary);
+
+            console.log(this)
+        }
+
+        const Emp1 = new Employee("Sefa", 25, 0);
+        const Emp2 = new Employee("Selim", 26, 15000);
+        Emp1.showInfos();
+        Emp2.showInfos();
+
+
+
+
+    </script>
+</body>
+</html>

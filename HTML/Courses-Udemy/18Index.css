@@ -1,0 +1,28 @@
+h2[title="Title1"] {
+    color:rgb(175, 120, 48);
+}
+
+p[title="Par1"]{
+    font-size: 20px;
+}
+
+p[title="Par2"]{
+    text-align: justify;
+}
+
+a[target = "_blank"]{
+    color:chartreuse;
+}
+
+input[type="text"]{
+    background-color:coral
+}
+
+input[type="button"]{
+    background-color:blueviolet;
+    color: aliceblue;
+}
+
+h2[title="Title2"]{
+    font-size:30px;
+}

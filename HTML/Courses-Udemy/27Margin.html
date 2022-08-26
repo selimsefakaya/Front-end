@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin</title>
+
+    <style>
+
+        /*margin: üst sağ alt sol pxler*/
+        /*margin: 10px 20px 5px 10px*/
+        /*margin: üst&alt sağ&sol*/
+        /*margin: 10px 20px*/
+        /*margin: auto -> genellikle sayfanın gövdesi için kullanılır.*/
+
+        .Box {
+            width: 10%;
+            height: 150px;
+            margin-right:10px;
+            float:left;
+        }
+
+        #Box_1 {
+            background-color: darkorange;
+        }
+
+        #Box_2 {
+            background-color: darkorchid;
+        }
+
+        #Box_3 {
+            background-color: darkgreen;
+        }
+
+        #Box_4 {
+            background-color: rgb(233, 185, 169);
+        }
+
+        span {
+            margin:50px;   /*Sadece sağ ve sol tarafından boşluk bırakılabilir.*/
+            background-color:bisque;
+            display:inline-block    /*4 taraftan boşluk bırakılmasına yarar.*/
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Margin ile sayfanın dört tarafından boşluklar bırakılabilir. -->
+    
+    <div class="Box" id="Box_1">Box 1</div>
+    <div class="Box" id="Box_2">Box 2</div>
+    <div class="Box" id="Box_3">Box 3</div>
+    <div class="Box" id="Box_4">Box 4</div>
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+
+</body>
+
+</html>

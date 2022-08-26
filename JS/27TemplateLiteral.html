@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Literal, String Oluşturmada Yeni Standart</title>
+</head>
+<body>
+    <!-- Kurstaki eksikler -->
+    
+
+
+
+
+    <script>
+        const name = "Selim Sefa Kaya";
+        const department = "IT";
+        const salary = 10000;
+
+        const a = "Name: " + name + "\n" + "Department: " + department + "\n" + "Salary: " + salary;
+        console.log(a);
+
+        console.log(
+            `Name: ${name}\nDepartment: ${department}\nSalary: ${salary}`
+        )
+
+        const html = "<ul> " +
+                     "<li>" + name + "</li>" +
+                     "<li>" + department + "</li>" +
+                     "<li>" + salary + "</li>" + 
+                     "</ul>"
+        document.body.innerHTML = html;
+
+        const html2 = `
+                <ul>
+                    <li>${name}</li>
+                    <li>${department}</li>
+                    <li>${salary}</li>
+                    <li>${100/8}</li>
+                    <li>${func()}</li>
+                </ul>
+        `
+
+        function func() {
+            return "Merhaba";
+        }
+
+        document.body.innerHTML = html2;
+    </script>
+</body>
+</html>

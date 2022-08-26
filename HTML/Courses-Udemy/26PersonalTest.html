@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Test</title>
+
+    <style>
+        body{
+            margin:0;  /*Sayfaya vrasayılan olarak atanan 8px boşluğu sıfırladı.*/
+        }
+        .Box {
+            width: 10%;
+            height: 150px;
+            margin:10px;
+            padding-left:10px;
+            padding-top:8px;
+        }
+
+        #Box_1 {
+            background-color: darkorange;
+        }
+
+        #Box_2 {
+            background-color: darkorchid;
+        }
+
+        #Box_3 {
+            background-color: darkgreen;
+        }
+
+        #Box_4 {
+            background-color: rgb(233, 185, 169);
+        }
+
+        .Edge {
+            background-color:white;
+            text-align:center;
+            font-size:10px;
+            position:fixed;
+        }
+
+        #EdgeBottom {
+            width:100%;
+            height:10px;
+            bottom:0px;
+        }
+        
+        #EdgeTop {
+            width:100%;
+            height:10px;
+            top:0px;
+        }
+
+        #EdgeLeft {
+            width:10px;
+            height:100%;
+            left: 0px;
+            top:0px;
+        }
+
+        #EdgeRight {
+            width:10px;
+            height: 100%;
+            right:0px;
+            top:0px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Margin ile sayfanın dört tarafından boşluklar bırakılabilir. -->
+    
+    <div class="Box" id="Box_1">Box 1</div>
+    <div class="Box" id="Box_2">Box 2</div>
+    <div class="Box" id="Box_3">Box 3</div>
+    <div class="Box" id="Box_4">Box 4</div>
+    <div class="Edge" id="EdgeBottom">Edge Bottom</div>
+    <div class="Edge" id="EdgeTop">Edge Top</div>
+    <div class="Edge" id="EdgeLeft">Edge Left</div>
+    <div class="Edge" id="EdgeRight">Edge Right</div>
+
+</body>
+
+</html>

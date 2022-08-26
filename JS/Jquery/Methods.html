@@ -1,0 +1,62 @@
+
+<html>
+
+    <head>
+        <title>Jquery</title>
+        <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
+        <!-- <script src="jquery-3.6.0.min.js"></script>  External -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+            integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <style>
+                .highlight {
+                    background-color:aqua;
+                }
+                .orange {
+                    background-color: orange;
+                }
+            </style>
+    </head>
+    
+    <body>
+    
+        <a href="#">Link 1</a>
+        <h3 id="header">JQuery</h3>
+        <ul id="list-ul">
+            <li class="item1 item">JQuery 1</li>
+            <li class="item">JQuery 2</li>
+            <li class="item">Jquery 3 <a href="#">Link 2</a></li>
+        </ul>
+
+        <img src="images/23.jpg" width="300">
+    
+        <input id="name" type="text" placeholder="Name">
+        <input id="surname" type="text" class="highlight" placeholder="SurName">
+        <button id="btnRegister" onclick="register();">Register</button>
+    
+    
+    
+        <script>
+            console.log($("h3").text());        //seçilen elementin text'i çağrıldı.
+            console.log($("ul li").text());     //seçilen elementlerin textlerini arka arkaya sıraladı.
+            $("h3").text("JQuery Methods");     //metin değiştirildi.
+
+            function register(){
+                var name=$("#name").val();      //kullanıcının girdiğini değeri çağırır ve değişkene atama yapar.
+                var surname = $("#surname").val()
+
+                console.log("The registration as " + name + " " + surname + " is successful.");
+
+                $("#name").addClass("highlight");
+                $("#surname").removeClass("highlight");
+                $("#btnRegister").toggleClass("orange");    //class'ı her click için ekler ve siler.
+
+            }
+
+            $("img").attr("width","200");       //özelliğini değiştirdi.
+            $("#name").attr("placeholder", "Your name");
+
+        </script>
+    </body>
+    
+    </html>

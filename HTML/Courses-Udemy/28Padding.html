@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padding</title>
+
+    <style>
+
+        .Box {
+            height: 150px;
+        }
+
+        #Box_1 {
+            background-color: darkorange;
+            padding: 20px;
+        }
+
+        #Box_2 {
+            background-color: darkorchid;
+            padding-left: 20px;
+            padding-top: 20px;
+        }
+
+        #Box_3 {
+            background-color: darkgreen;
+            padding: 10px 20px 30px 20px;
+        }
+
+        #Box_4 {
+            background-color: rgb(233, 185, 169);
+            padding: 10px 20px;
+        }
+
+        span {
+            width: 200px;
+            padding: 20px;      
+            /*Span'de verilen padding öğeyi her türlü büyütür. Block değilse iç içe karışır.*/
+            margin: 10px;
+            background-color:bisque;
+            display: inline-block;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    
+    <div class="Box" id="Box_1">Box 1</div>
+    <div class="Box" id="Box_2">Box 2</div>
+    <div class="Box" id="Box_3">Box 3</div>
+    <div class="Box" id="Box_4">Box 4</div>
+    <span>Lorem, ipsum dolor.</span>
+    <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel!</span>
+    <span>Lorem ipsum dolor sit, amet consectetur adipisicing.</span>
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, doloremque?</span>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+/* Group Selectors
+
+
+(p) -> Tüm p etiketleri
+
+(div p) -> div içerisindeki tüm p etiketleri
+
+(div,p) -> Tüm div ve tüm p etiketleri
+
+(p + div) -> p etiketinden sonra gelen div etiketi
+
+*/
+
+/*
+p { 
+    color:red;
+}
+*/
+
+/*
+div p {
+    color:red;
+}
+*/
+
+/*
+.Container {
+    color:red;
+}
+*/
+
+/* div p seçimi, .Container seçimini baskılar. */
+
+/*
+.Container div p {
+    color:aqua
+}
+*/
+
+/*
+.Box ,.Container p {
+    color:aquamarine;
+}
+*/
+
+/*
+p + div {
+    color:blue;
+}
+*/
+
+/*
+.Container + p{
+    color:brown;
+}
+*/
+
+#Box_2, p {
+    color:blue;
+}
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablo Oluşturma</title>
+</head>
+
+<body>
+
+    <table border="2" width="80%">
+        <thead>     <!--Table head-->
+            <tr>        <!--Table row-->
+                <th width="10%">Car Name</th>       <!--Table head-->
+                <th width="12%">Price</th>
+                <th width="35%">Description</th>
+                <th width="50%">Merge Cell</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>X</td>      <!--Table Data-->
+                <td>100.000</td>
+                <td>Description XDescription XDescription X</td>
+                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, qui modi.</td>
+            </tr>
+            <tr>
+                <td>Y</td>
+                <td>200.000</td>
+                <td>Description YDescription Y</td>
+                <td>Lorem ipsum dolor sit.</td>
+            </tr>
+            <tr>    
+                <td>Z</td>
+                <td>250.000</td>
+                <td>Description ZDescription ZDescription Z</td>
+                <td rowspan="3">Bu sütundaki '3' satırı birleştirdi.</td>      <!--rowspan ile kendinden sonra gelen belirtilen değer kadar sütunu birleştirilir.-->
+            </tr>
+            <tr>
+                <td colspan="2">Bu satırdaki '2' sütunu birleştirdi.</td>       <!--colspan ile kendinden sonra gelen belirtilen değer kadar satırı birleştirilir-->
+                <td>Description</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>2345233</td>
+                <td>Lorem ipsum dolor sit.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br><br><br>
+
+    <table border="1" width="50%">
+        <thead>
+            <th>Car</th>
+            <th>Price</th>
+            <th>Description</th>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td>X</td>
+                <td>100</td>
+                <td>Description1</td>
+            </tr>
+            <tr>
+                <td>Y</td>
+                <td>200</td>
+                <td rowspan="2">Description2</td></tr>
+            <tr>
+                <td>Z</td>
+                <td>150</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+</body>
+
+</html>

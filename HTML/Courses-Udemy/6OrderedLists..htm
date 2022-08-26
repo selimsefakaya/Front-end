@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sıralı Listeler</title>
+</head>
+<body>
+    
+    <!-- <ol> etiketi ile sayılarla sıralanmış listeler oluşturulur. -->
+
+    <ol>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <ol>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, mollitia!</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        </ol>
+        <li>Lorem ipsum dolor sit.</li>
+        <li>Lorem, ipsum dolor.</li>
+    </ol>
+
+    <!-- ol>li*5 kısayolu ile 5 maddelik <li> etiketinden oluşan bir ol oluşturulur. -->
+
+    <ol start="3" type="A">  <!-- start ile sıralamaya kaçtan başlanacağı belirtilir. type ile  sıralamanın nasıl yapılacağı seçilir. -->
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit.</li>
+        <li>Lorem, ipsum dolor.</li>
+        <ol type="a">
+            <li>lorem</li>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem, ipsum.</li>
+        </ol>
+    </ol>
+    <ol type="I" start="4">
+        <li>Lorem ipsum dolor sit amet.</li>
+        <ol type="i">
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum.</li>
+            <li>Lorem ipsum dolor sit.</li>
+        </ol>
+        <li>Lorem ipsum dolor sit.</li>
+        <li>Lorem, ipsum dolor.</li>
+    </ol>
+
+</body>
+</html>

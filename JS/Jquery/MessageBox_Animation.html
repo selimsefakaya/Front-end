@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <title>Jquery</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
+    <!-- <script src="jquery-3.6.0.min.js"></script>  External -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+        integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+
+        body  {
+            margin: 0;
+            padding: 0
+        }
+
+        #message-box {
+            background-color: darkcyan;
+            text-align: center;
+            color: white;
+        }
+
+        #header{
+            cursor: pointer;
+            height: 20px;
+            padding: 10px;
+            border-bottom: 1px solid white;
+        }
+
+        #content {
+            height:150px;
+            padding: 10px;
+            display:none;
+        }
+
+        #close {
+            float:right;
+            transition: 1s;
+        }
+
+        #close:hover{
+            color: black;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <div id="message-box">
+        <div id="header">
+            <span id="close">X</span> You have new messages!
+        </div>
+
+        <div id="content">
+
+        </div>
+    </div>
+
+
+    <script>
+
+        $(function(){
+            $("#header").click(function(){
+                $("#content").toggle("slow");
+            });
+            $("#close").click(function(){
+                $("#message-box").hide(2000);
+            });
+        })
+
+    </script>
+</body>
+
+</html>

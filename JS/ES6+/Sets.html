@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set (Kümeler)</title>
+</head>
+<body>
+    Set'ler için önemli özellik, bir değeri yalnızca bir kere taşır.
+
+    <script>
+        const mySet = new Set();
+        mySet.add(100);
+        mySet.add(100);
+        mySet.add(3.14);
+        mySet.add("Sefa");
+        mySet.add(true);
+        mySet.add([1,2,3]);
+        mySet.add({a:1,b:2});
+
+        const mySet2 = new Set([100,100,3.14,"Sefa",true,[1,2,3],{a:1,b:2}]);
+
+        //Size
+        console.log(mySet.size);
+        //Delete
+        mySet.delete("Sefa");
+        mySet.delete("100");
+        //Has
+        console.log(mySet.has("100"));
+        console.log(mySet.has(100));
+        console.log(mySet.has([1,2,3]));
+
+        console.log("mySet", mySet);
+        console.log("mySet2", mySet2);
+        console.log("\n\n");
+
+        //For Each
+        mySet.forEach(function(value){
+            console.log(value);
+        })
+        console.log("\n\n");
+        
+        //For of
+        for (let value of mySet){
+            console.log(value);
+        }
+        console.log("\n\n");
+        
+        //Setlerden Array Oluşturma
+        const array = Array.from(mySet);
+        console.log(array);
+    </script>
+</body>
+</html>

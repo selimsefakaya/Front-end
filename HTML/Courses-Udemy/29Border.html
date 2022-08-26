@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border</title>
+
+    <style>
+        .Box {
+            width: 400px;
+            height:150px;
+            background: gray;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        #Box_1 {
+            border:3px solid black;
+            border-radius: 100px;    /*Köşeleri kıvrımlı*/
+            width:150px;
+            height:150px;
+            border-radius: 50%;     /*Tam daire şeklinde oldu, en-boy farklı olsaydı elips olurdu.*/
+        }
+
+        #Box_2 {
+            border-top: 10px dashed aqua;
+            border-right-style: groove;
+            border-right-color: deeppink;
+        }
+
+        #Box_3 {
+            border-width: 5px;
+            border-style: double;
+            border-color: rgb(41, 192, 41);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="Box" id="Box_1">Box 1</div>
+    <div class="Box" id="Box_2">Box 2</div>
+    <div class="Box" id="Box_3">Box 3</div>
+
+</body>
+
+</html>

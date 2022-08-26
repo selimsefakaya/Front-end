@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+
+    <style>
+        div {
+            width: 250px;
+            height: 100px;
+            background-color: blueviolet;
+            margin: 5px;
+            color: bisque;
+            padding-left: 10px;
+            padding-top: 10px;
+            /*display:inline olarak belirtilen öğelere genişlik veya yükselik atanamaz. inline-block yapılırsa hem yan yana hem de blok olarak çalışır.*/
+            display:inline-block;
+        }
+        a {
+            /*Varsayılan olarak display:inline olan link etiketini block yapılarak alt alta yazdırılabilir.*/
+            margin-left: 7.5px;
+            display:block;
+            width: 50px;
+        }
+        span {
+            display:block;
+        }
+        #Box1 {
+            /*display:none yapılırsa öğeyi gizler.*/
+            display:none;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+
+    <div id="Box1">Box 1</div>
+    <div id="Box2">Box 2</div>
+    <a href="">Link 1</a>
+    <a href="">Link 2</a>
+    <a href="">Link 3</a>
+    <br><br>
+    <span>Lorem ipsum dolor sit amet consectetur.</span>
+    <span>Lorem ipsum dolor sit amet.</span>
+    <span>Lorem ipsum dolor sit.</span>
+
+    <!-- div'ler blok oldukları için varsayılan olarak alt alta yerleşirken etiketlerin inline olduğu görülür.-->
+
+
+</body>
+
+</html>

@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 7px;
+}
+
+body {
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    font-size: 1.4rem;
+    /*1.6*10px-> Tek bir noktadan tamamı orantılı şekilde yönetilebilir.*/
+    line-height: 1.5;
+    text-align: center;
+    background-color: bisque;
+}
+
+img {
+    width: 100%;
+    height: auto; /*
+    border-top-left-radius:15px;
+    border-top-right-radius:15px;*/
+}
+
+a{
+    text-decoration: none;
+}
+
+.clear-fix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+header {
+    height: 42rem;
+}
+
+header .bg-image {
+    background-image: url(images/Banner.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 42rem;
+    width: 100%;
+    opacity: 0.5;
+    position: absolute;
+    z-index: -1;    /*Alt sıraya gönderir.*/
+}
+
+.content-name-linkedin * {
+    display: inline-block;
+}
+
+.content-name-linkedin i {
+    color: blue;
+    font-size: 3rem;
+    position: relative;
+    bottom: 0.1rem;
+}
+
+#camera {
+    color: black;
+    font-size:2.5rem;
+}
+
+.content-name-linkedin h1 {
+    font-family: 'Orbitron', sans-serif;
+    padding: 12rem 1rem;
+    padding-bottom: 0;
+}
+
+.head-content p {
+    font-family: 'Indie Flower', cursive;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 2rem;
+}
+
+.head-content .btn {
+    display: inline-block;
+    background-color: bisque;
+    color: black;
+    border: 1px dotted hsl(33, 100%, 50%);
+    border-radius:5px;
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+    transition-duration: 0.4s;
+}
+
+.head-content .btn:hover {
+    background-color: chocolate;
+}
+
+#section-a {
+    background-color: rgb(250, 241, 229);
+    padding: 3.2rem;
+}
+
+#section-b {
+    padding:2rem;
+}
+
+#section-b h3 {
+    font-size:2.2rem;
+    padding: 0.5rem;
+}
+
+#section-b p {
+    padding: 0rem 0 3rem 0;
+}
+
+#section-b ul {
+    list-style-type: none;
+}
+
+#section-b li {
+    background-color: rgb(250, 241, 229);
+    margin-bottom:3rem;
+    /*border-radius:15px;*/
+    border-top: 1px solid hsl(0, 0%, 80%);
+    border-right: 1px solid hsl(0, 0%, 80%);
+    border:1px solid hsl(0, 0%, 80%);
+}
+
+.col-content {
+    padding: 1.5rem 3rem;
+}
+
+#section-c {
+    background-color:rgb(250, 241, 229);
+    padding: 4rem;
+}
+
+#section-c p {
+    font-family: 'Comfortaa', cursive;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+}
+
+#section-c i {
+    color: black;
+    font-size: 2rem;
+}
+
+#section-d .box {
+    padding: 4rem;
+}
+
+#section-d .box:first-child {
+    background-color: chocolate;
+}
+
+.link-div {
+    display:inline-block;
+    font-size: 3.5rem;
+    margin:1.5rem 1rem 0 1rem;
+}
+
+.link-div a:hover {
+    color:chocolate;
+}
+
+footer {
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+}
+
+footer a {
+    color:chocolate;
+    padding:0.4rem 0.5rem;
+}
+
+footer a:hover {
+    background-color: chocolate;
+    border-radius: 15px;
+    color:black;
+}
+
+@media screen and (min-width:800px){
+
+    html {
+        font-size:9px;
+    }
+    
+}
+
+@media screen and (min-width:1200px){
+    
+    html {
+        font-size:10px
+    }
+
+    #section-b li {
+        width: 30%;
+        height: 425px;
+        margin: 1%;
+        display:inline-block;
+        overflow:hidden;
+    }
+
+    #section-d .box{
+        width: 50%;
+        float: left;
+    }
+    
+    .column img {
+        width: 100%;
+    }
+
+    #section-d .box:first-child {
+        background-color:bisque;
+    }
+    
+    #section-d .box:last-child {
+        border-left:1px dashed hsl(0, 0%, 50%);
+    }
+
+
+    @media screen and (min-width:1500px) {
+
+        html{
+            font-size: 10px;
+        }
+        #section-b li {
+            width: 30%;
+            height: 500px;
+            margin: 1%;
+            display:inline-block;
+            overflow:hidden;
+        }
+    
+        #section-d .box{
+            width: 50%;
+            float: left;
+        }
+        
+
+            
+    }
+
+
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design</title>
+
+    <style>
+
+        * {  /*Tüm öğelerde geçerli demek.*/
+            box-sizing: border-box;     /*Border'lar yer kaplamıyor. Border box-size içine dahil edildi.*/
+        }
+        h1 {
+            width:100%;
+        }
+        
+        @media screen and (max-width:700px) {
+            h1 {
+                font-size: 30px;        
+                color:aqua;
+            }
+        }
+
+        
+        @media screen and (max-width:400px) {
+            h1 {
+                font-size: 20px;
+                color:blueviolet;
+            }
+        }
+
+        .DivBox {
+            width: 30%;
+            height: 250px;
+            background-color: hsl(160, 100%, 95%);
+            float: left;
+            border:1px solid black;
+            margin: 3px;
+        }
+
+        @media screen and (max-width:700px) {
+
+            .DivBox {
+                width: 48%;
+            }
+            
+        }
+
+        @media screen and (max-width:400px) {
+
+            .DivBox {
+                width: 250px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+    
+    <div class="DivBox"></div>
+    <div class="DivBox"></div>
+    <div class="DivBox"></div>
+    <div class="DivBox"></div>
+    <div class="DivBox"></div>
+    <div class="DivBox"></div>
+    
+</body>
+</html>

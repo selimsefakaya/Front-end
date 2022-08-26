@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Methods</title>
+</head>
+<body>
+
+    Durağan metotlar. Sınıfların içinde statik metotlarımızı yazarsak, obje oluşturmasak dahi bunları kullanabiliriz.
+
+    <script>
+        class Mathematic {
+            cube(x) {
+                console.log(x * x * x);
+            }
+        }
+
+        const math = new Mathematic();
+        console.log(math);
+        math.cube(3);
+
+        /////////////Statik Metot
+
+        class Mathematics {
+            static cube(x) {
+                console.log(x * x * x);
+            }
+
+            pow(x) {
+                console.log(x * x);
+            }
+        }
+
+        Mathematics.cube(7);
+
+        const math2 = new Mathematics();
+        // math2.cube(4);      //kullanılamaz.
+        console.log(math2);     //statik fonksiyonlar prototip'e yazılmaz. Yani cube fonksiyonuna obje üzerinden erişemedik.
+        // pow statik olmadığı için çalışır:
+        math2.pow(4);
+        // pow statik olmadığı için obje oluşturulmadan çalıştırılamaz.
+        // Mathematics.pow(4);    //kullanılamaz.
+        // Object.create() metodu, objenin içine yazılmış statik bir metot olduğu için obje oluşturmadan kullanabiliyoruz.
+
+
+    </script>
+</body>
+</html>

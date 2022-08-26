@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+
+<body>
+
+    Java, C#, Python gibi diller class tabanlı dillerdir. JS, prototype tabanlı bir programlama dilidir. İçinde classlar
+    bulunmaz. <br> ES6'da class gibi yazılan objeler arkaplanda prototype'a dönüştürülür. <br>
+
+    <script>
+        // const object = new Object();
+        // const object2 = new Object();
+        // object.name = "Sefa";
+        // console.log(object);
+        
+        ///////////////
+
+        function Employee(name,age) {
+            this.name = name;
+            this.age = age;
+            this.showInfos = () => console.log("Name:", name, "Age:", age);
+        }
+
+        const Emp1 = new Employee("Sefa",25);
+        //Bir obje oluşturduk(employee), bunun bir prototipi(employee prototipi) var. Bu prototipin de bir prototipi(object prototype) var. Prototype chain. 
+        console.log(Emp1.toString());       //toString, obje prototipinin içinden geldi.
+
+
+        ///////////////////
+
+        const Emp2 = new Employee("Selim",27);
+        console.log(Emp1,Emp2);     // Proto'larında aynı fonksiyonlardan(showInfos) iki tane kopya olur. 1000 tane oluşturulsa, bellekte 1000 tane yer kaplayacak. Bu fonksiyon prototype içine yazılırsa yalnızca bir tane yer kaplar ve bütün objeler buna sahip olur.
+
+
+        function Employee1(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        Employee1.prototype.showInfos = function() {        // ES6+ ile yazılınca kabul etmiyor. 
+            console.log("Name:", this.name, "Age:", this.age);
+        }
+
+        const emp1 = new Employee1("Sefa", 25);
+        const emp2 = new Employee1("Selim", 27);
+        console.log(emp1);      //showInfos constructor'a ait prototype içinde yer alıyor. Her obje bu prototipi kullanabilir.
+        console.log(emp2);
+
+        emp2.showInfos();
+
+
+
+    </script>
+</body>
+
+</html>

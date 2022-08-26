@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object.Create()</title>
+</head>
+
+<body>
+    Eğer bir obje oluştururken, prototipini başka bir objeden almak istersek object.create kullanırız.create
+
+
+    <script>
+        const obj = {
+            test1: function() {
+                console.log("Test 1");
+            },
+            test2: function() {
+                console.log("Test 2");
+            }
+        }
+
+        //console.log(obj);
+
+        const emp = Object.create(obj);     //emp isminde bir obje oluşturdu, obj'nin prototipini alır.
+        console.log(emp)    //prototipinin içinde test1 ve test2 var.
+        
+        emp.name = "Sefa";
+        emp.age = 25;
+
+
+        ///////////////////////////////
+
+        function Person(){
+
+        }
+
+        Person.prototype.test1= function() {
+            console.log("Test 1");
+        }
+        Person.prototype.test2= function() {
+            console.log("Test 2");
+        }
+
+        
+        function Employee2(name,age){
+            this.name = name;
+            this.age = age;
+        }
+
+        Employee2.prototype = Object.create(Person.prototype);       //Employee'nin prototipini, object.create metodu ile Person prototipi üzerinden oluşturduk.
+        Employee2.prototype.myTest = function() {
+            console.log("My Test");
+        }
+
+        //Normalde Emp1->Employee->Object iken, Emp1->Employee->Person->Object şeklinde oluştu.
+
+        const emp_ = new Employee2("Sefa",25);
+        emp_.test1();       //Personun prototipinden metot miras alındı.
+        emp_.myTest();      //Employee2'nin kendi metotları da alındı.
+        console.log(emp_);
+        
+
+        
+
+
+    </script>
+</body>
+
+</html>

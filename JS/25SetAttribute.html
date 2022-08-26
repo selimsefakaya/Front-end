@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <body style="font-family:Verdana, Geneva, Tahoma, sans-serif; font-size: 16px;">
+        <h2>Elementlerin Niteliklerini Değiştirme</h2>
+        <input type="text" id="willChange" value="Bu alan değiştirilecek.">
+        <button onclick="degistir()">Değiştir</button>
+
+        <script>
+            function degistir() {
+                document.getElementsByTagName("INPUT")["willChange"].setAttribute("type", "button");
+                document.getElementsByTagName("INPUT")["willChange"].setAttribute("value", "Bu alan değiştirildi.");
+            }
+        </script>
+    </body>
+</html>

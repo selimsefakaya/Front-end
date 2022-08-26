@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <title>Jquery</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
+    <!-- <script src="jquery-3.6.0.min.js"></script>  External -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+        integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        .highlight {
+            background-color: aqua;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+        
+        h2 {
+            margin: 8px 0;
+        }
+
+        div {
+            margin: 0 0 10px 0
+        }
+
+        body {
+            padding:10px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    
+    <div>JQuery Show / Hide Method</div>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="hide-show">Hide/Show</button>
+    <br><br>
+    <h2>JQuery</h2>
+    <button id="hide2">Hide</button>
+    <button id="show2">Show</button>
+    <button id="hide-show2">Hide/Show</button>
+
+
+    <script>
+
+       $(document).ready(function(){
+            $("#hide").click(function(){
+                $("div").hide();
+            });
+
+            $("#show").click(function(){
+                $("div").show("fast");
+            })
+
+            $("#hide-show").click(function(){
+                $("div").toggle("slow");
+            })
+
+            $("#hide2").click(function(){
+                $("h2").hide(2000);                 //ms cinsinden süresi belirtilebilir.
+            });
+
+            $("#show2").click(function(){
+                $("h2").show(1500, function(){      //show ile birlikte ayrıca fonksiyon eklenebilir.
+                    alert("h2 shown.");
+                });
+            });
+
+            $("#hide-show2").click(function(){
+                $("h2").toggle(1200, function(){
+                    console.log("h2 toggled.");
+                });
+            });
+       });
+
+    </script>
+</body>
+
+</html>

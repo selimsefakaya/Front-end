@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance in ES6</title>
+</head>
+<body>
+    <script>
+        class Person {      //SuperClass, BaseClass
+            constructor (name,age){
+                this.name = name;
+                this.age = age;
+            }
+            showInfos(){
+                console.log(this.name, this.age);
+            }
+        }
+
+        class Employee extends Person {     //DerivedClass, SubClass, ChildClass
+            constructor (name, age, salary){
+                // this.name = name;
+                // this.age = age;
+                super(name, age);
+                this.salary = salary;
+            }
+
+            //showInfos içinde salary olmadığı için overWrite yapacağız.
+            showInfos() {
+                console.log(this.name, this.age, this.salary);
+            }
+
+            toString() {
+                console.log("Employee")
+            }
+
+            raiseSalary(amount){
+                this.salary = this.salary + amount;
+            }
+        }
+
+        const emp = new Employee("Sefa", 25, 15000);
+        console.log(emp);
+        emp.toString();
+        emp.raiseSalary(    6000);
+        emp.showInfos();
+        
+
+    </script>
+</body>
+</html>

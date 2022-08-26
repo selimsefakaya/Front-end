@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>Jquery</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
+    <!-- <script src="jquery-3.6.0.min.js"></script>  External -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+        integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+
+    <a href="#">Link 1</a>
+    <h3>JQuery</h3>
+    <ul id="list-ul">
+        <li class="item1 item">JQuery 1</li>
+        <li class="item">JQuery 2</li>
+        <li class="item">Jquery 3 <a href="#">Link 2</a></li>
+    </ul>
+
+
+
+
+    <script>
+        console.log($("#list-ul"));     //id ile seçme işlemi
+
+        console.log($("h3"));           //tag ile seçme
+
+        console.log($("ul"));
+
+        console.log($("li"));           //tag ile seçme işlemi. 3 li elementi de görünür.
+
+        console.log($(".item1"));
+
+        console.log($(".item"));        //class ile seçme. 3'ünü de gösterir.
+
+        console.log($("a"));            //tüm a'ları gösterir.
+        
+        console.log($("li a"));         //li içindeki a seçildi.
+        
+        console.log($("#list-ul a"));   //id içindeki a seçildi.
+        
+    </script>
+</body>
+
+</html>
