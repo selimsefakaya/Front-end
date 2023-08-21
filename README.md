@@ -57,4 +57,4 @@ Projects bölümünde yer alan projelerden **Automotive List**, **Portfolio**, *
 # **Selim Sefa Kaya**
 
 
-### [LinkedIn](linkedin.com/in/selimsefa) | [GitHub](github.com/selimsefakaya)     |    [Gmail](mailto:sefakayatr@gmail.com)
+### [LinkedIn](https://linkedin.com/in/selimsefa) | [GitHub](https://github.com/selimsefakaya)     |    [Gmail](mailto:sefakayatr@gmail.com)
